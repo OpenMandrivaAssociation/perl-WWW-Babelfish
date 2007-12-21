@@ -17,6 +17,7 @@ Buildrequires:	perl-devel
 BuildRequires:  perl-libwww-perl
 BuildRequires:  perl(IO::String)
 Buildarch:	noarch
+Buildroot:	%{_tmppath}/%{name}-%{version}
 
 %description
 Perl interface to the WWW babelfish translation server.
