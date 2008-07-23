@@ -1,7 +1,7 @@
 %define	module	WWW-Babelfish
 %define	name	perl-%{module}
 %define	version	0.16
-%define	release %mkrel 1
+%define	release %mkrel 3
 
 Name:		%{name}
 Version:	%{version}
