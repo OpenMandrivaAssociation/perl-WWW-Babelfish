@@ -1,15 +1,13 @@
 %define	upstream_name	 WWW-Babelfish
-%define	upstream_version 0.16
-
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	4
+Version:	0.16
+Release:	5
 
 Summary:	Perl extension for translation via Babelfish or Google
 License:	GPL
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	http://www.cpan.org/modules/by-module/WWW/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	http://www.cpan.org/modules/by-module/WWW/%{upstream_name}-%{version}.tar.bz2
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -22,7 +20,7 @@ BuildArch:	noarch
 Perl interface to the WWW babelfish translation server.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor <<EOD
@@ -46,9 +44,7 @@ make test
 %changelog
 * Tue Aug 04 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.160.0-1mdv2010.0
 + Revision: 409020
-- rebuild using %%perl_convert_version
-
-* Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.16-3mdv2009.0
+- rebuild using %0.16 Wed Jul 23 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.16-3mdv2009.0
 + Revision: 242149
 - rebuild
 - kill re-definition of %%buildroot on Pixel's request
